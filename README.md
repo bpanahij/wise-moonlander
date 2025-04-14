@@ -57,6 +57,75 @@ This is a custom keymap for the ZSA Moonlander keyboard, optimized for ergonomic
 
 3. Wait for the flashing process to complete. Your keyboard will automatically restart with the new layout.
 
+## Keyboard Layout Visualization with qmk.nvim
+
+This keymap uses nice ASCII keyboard layout comments that provide a visual representation of each layer. To get these visualizations when editing the keymap, you can use the qmk.nvim plugin for Neovim.
+
+### Installing qmk.nvim
+
+1. Make sure you have [Neovim](https://neovim.io/) installed (version 0.5.0 or later)
+
+2. Install qmk.nvim using your preferred plugin manager:
+
+   Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+   ```lua
+   return {
+     "codethread/qmk.nvim",
+     config = function()
+       -- Configuration will be in a separate file
+     end
+   }
+   ```
+
+   Using [vim-plug](https://github.com/junegunn/vim-plug):
+   ```vim
+   Plug 'codethread/qmk.nvim'
+   ```
+
+3. Configure qmk.nvim in your Neovim config using auto-detection for Moonlander keymap files:
+
+   ```lua
+   -- In your Neovim config (e.g., ~/.config/nvim/lua/plugins/qmk.lua)
+   return {
+     "codethread/qmk.nvim",
+     config = function()
+       local group = vim.api.nvim_create_augroup("MyQMK", {})
+       
+       vim.api.nvim_create_autocmd("BufEnter", {
+         desc = "Format moonlander keymap",
+         group = group,
+         pattern = "*moonlander*keymap.c",
+         callback = function()
+           require("qmk").setup({
+             name = "LAYOUT_moonlander",
+             auto_format_pattern = "*moonlander*keymap.c",
+             layout = {
+               "x x x x x x x _ _ _ _ x x x x x x x",
+               "x x x x x x x _ _ _ _ x x x x x x x",
+               "x x x x x x x _ _ _ _ x x x x x x x",
+               "x x x x x x _ _ _ _ _ _ x x x x x x",
+               "x x x x x _ x _ _ _ _ x _ x x x x x",
+               "_ _ _ _ _ x x x _ _ x x x _ _ _ _ _",
+             },
+             comment_preview = {
+               position = "inside",
+             }
+           })
+         end,
+       })
+     end
+   }
+   ```
+
+4. With this configuration, the plugin will automatically format your keymap.c file whenever you open it in Neovim. The ASCII keyboard layout comments will be generated based on your keymap definitions.
+
+5. You can also use these commands manually:
+   - `:QMKFormat` - Format the current keymap
+   - `:QMKPreview` - Preview the current keymap
+   - `:QMKToggleComment` - Toggle between comment styles
+
+The plugin will help you maintain the nice ASCII keyboard layout comments and make it easier to visualize your keymap changes.
+
 ## Customization
 
 To customize this layout further:
