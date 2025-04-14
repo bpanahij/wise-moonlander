@@ -85,4 +85,4 @@ This keymap is provided under the GPL license that comes with QMK firmware.
 
 ## Credits
 
-Created by Brian Wise, April 2025.
+Created by Brian Johnson, April 2025.
