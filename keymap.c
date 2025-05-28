@@ -118,157 +118,157 @@ tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAK] = LAYOUT_moonlander(
-//    ┌──────┬────┬────┬───────────┬───────┬─────┬──────┐                 ┌──────┬──────────┬────┬────┬────┬──────┬──────┐
-//    │ esc  │ no │ no │ FNC_MINUS │  no   │ no  │  no  │                 │  no  │    `     │ /  │ \  │ %  │ bspc │ bspc │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤                 ├──────┼──────────┼────┼────┼────┼──────┼──────┤
-//    │  no  │ q  │ w  │     f     │   p   │  g  │  no  │                 │  no  │    j     │ l  │ u  │ y  │  =   │  :   │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤                 ├──────┼──────────┼────┼────┼────┼──────┼──────┤
-//    │ lctl │ a  │ r  │  MOUSE_S  │ TXT_T │  d  │  no  │                 │  no  │    h     │ n  │ e  │ i  │  o   │  '   │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┘                 └──────┼──────────┼────┼────┼────┼──────┼──────┤
-//    │ lsft │ z  │ x  │     c     │   v   │  b  │                               │    k     │ m  │ ,  │ .  │  ;   │ rsft │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┐                 ┌──────┼──────────┼────┼────┼────┼──────┼──────┤
-//    │ lalt │ no │ no │    no     │  no   │     │  no  │                 │  no  │          │ no │ no │ no │  no  │  no  │
-//    └──────┴────┴────┴───────────┴───────┼─────┼──────┼────┐       ┌────┼──────┼──────────┼────┴────┴────┴──────┴──────┘
-//                                         │ spc │ lsft │ no │       │ no │ lgui │ CTL_ENTR │
-//                                         └─────┴──────┴────┘       └────┴──────┴──────────┘
-  KC_ESC  , KC_NO , KC_NO , FNC_MINUS , KC_NO , KC_NO  , KC_NO   ,                         KC_NO   , KC_GRAVE , KC_SLASH , KC_BSLS , KC_PERC , KC_BSPC , KC_BSPC,
-  KC_NO   , KC_Q  , KC_W  , KC_F      , KC_P  , KC_G   , KC_NO   ,                         KC_NO   , KC_J     , KC_L     , KC_U    , KC_Y    , KC_EQL  , KC_COLN,
-  KC_LCTL , KC_A  , KC_R  , MOUSE_S   , TXT_T , KC_D   , KC_NO   ,                         KC_NO   , KC_H     , KC_N     , KC_E    , KC_I    , KC_O    , KC_QUOT,
-  KC_LSFT , KC_Z  , KC_X  , KC_C      , KC_V  , KC_B   ,                                             KC_K     , KC_M     , KC_COMM , KC_DOT  , KC_SCLN , KC_RSFT,
-  KC_LALT , KC_NO , KC_NO , KC_NO     , KC_NO ,          KC_NO   ,                         KC_NO   ,            KC_NO    , KC_NO   , KC_NO   , KC_NO   , KC_NO  ,
-                                                KC_SPC , KC_LSFT , KC_NO ,         KC_NO , KC_LGUI , CTL_ENTR
+//    ┌──────┬────┬────┬───────────┬───────┬─────┬──────┐             ┌──────┬──────────┬────┬────┬────┬────┬──────┐
+//    │ esc  │ no │ no │ FNC_MINUS │  no   │ no  │  no  │             │  no  │    no    │ `  │ /  │ \  │ %  │ bspc │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤             ├──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │  no  │ q  │ w  │     f     │   p   │  g  │  no  │             │  no  │    j     │ l  │ u  │ y  │ =  │  :   │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤             ├──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │ lctl │ a  │ r  │  MOUSE_S  │ TXT_T │  d  │  no  │             │  no  │    h     │ n  │ e  │ i  │ o  │  '   │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┘             └──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │ lsft │ z  │ x  │     c     │   v   │  b  │                           │    k     │ m  │ ,  │ .  │ /  │  !   │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┐             ┌──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │ lalt │ no │ no │    no     │  no   │     │  no  │             │  no  │          │ no │ no │ no │ no │  no  │
+//    └──────┴────┴────┴───────────┴───────┼─────┼──────┼────┐   ┌────┼──────┼──────────┼────┴────┴────┴────┴──────┘
+//                                         │ spc │ lsft │ no │   │ no │ lgui │ CTL_ENTR │
+//                                         └─────┴──────┴────┘   └────┴──────┴──────────┘
+  KC_ESC  , KC_NO , KC_NO , FNC_MINUS , KC_NO , KC_NO  , KC_NO   ,                     KC_NO   , KC_NO    , KC_GRAVE , KC_SLASH , KC_BSLS , KC_PERC  , KC_BSPC,
+  KC_NO   , KC_Q  , KC_W  , KC_F      , KC_P  , KC_G   , KC_NO   ,                     KC_NO   , KC_J     , KC_L     , KC_U     , KC_Y    , KC_EQL   , KC_COLN,
+  KC_LCTL , KC_A  , KC_R  , MOUSE_S   , TXT_T , KC_D   , KC_NO   ,                     KC_NO   , KC_H     , KC_N     , KC_E     , KC_I    , KC_O     , KC_QUOT,
+  KC_LSFT , KC_Z  , KC_X  , KC_C      , KC_V  , KC_B   ,                                         KC_K     , KC_M     , KC_COMM  , KC_DOT  , KC_SLASH , KC_EXLM,
+  KC_LALT , KC_NO , KC_NO , KC_NO     , KC_NO ,          KC_NO   ,                     KC_NO   ,            KC_NO    , KC_NO    , KC_NO   , KC_NO    , KC_NO  ,
+                                                KC_SPC , KC_LSFT , KC_NO ,     KC_NO , KC_LGUI , CTL_ENTR
 ),
 
 [_NUMPAD] = LAYOUT_moonlander(
-//    ┌────┬────┬────┬───┬────┬────┬────┐                 ┌────┬────┬────┬────┬────┬────┬──────┐
-//    │ no │ no │ no │ 0 │ no │ no │ no │                 │ no │ no │ no │ no │ no │ no │ bspc │
-//    ├────┼────┼────┼───┼────┼────┼────┤                 ├────┼────┼────┼────┼────┼────┼──────┤
-//    │ no │ no │ 7  │ 8 │ 9  │ +  │ no │                 │ no │ @  │ &  │ [  │ ]  │ =  │  ;   │
-//    ├────┼────┼────┼───┼────┼────┼────┤                 ├────┼────┼────┼────┼────┼────┼──────┤
-//    │ no │ no │ 4  │ 5 │ 6  │ -  │ no │                 │ no │ #  │ $  │ {  │ }  │ |  │  no  │
-//    ├────┼────┼────┼───┼────┼────┼────┘                 └────┼────┼────┼────┼────┼────┼──────┤
-//    │ no │ no │ 1  │ 2 │ 3  │ 0  │                           │ !  │ ~  │ (  │ )  │ no │  no  │
-//    ├────┼────┼────┼───┼────┼────┼────┐                 ┌────┼────┼────┼────┼────┼────┼──────┤
-//    │ no │ no │ no │ 0 │ no │    │ .  │                 │ no │    │ no │ no │ no │ no │  no  │
-//    └────┴────┴────┴───┴────┼────┼────┼────┐       ┌────┼────┼────┼────┴────┴────┴────┴──────┘
-//                            │ no │ no │ no │       │ no │ no │ no │
-//                            └────┴────┴────┘       └────┴────┴────┘
-  KC_NO , KC_NO , KC_NO , KC_0 , KC_NO , KC_NO   , KC_NO  ,                         KC_NO , KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_BSPC,
-  KC_NO , KC_NO , KC_7  , KC_8 , KC_9  , KC_PLUS , KC_NO  ,                         KC_NO , KC_AT   , KC_AMPR , KC_LBRC , KC_RBRC , KC_EQL  , KC_SCLN,
-  KC_NO , KC_NO , KC_4  , KC_5 , KC_6  , KC_MINS , KC_NO  ,                         KC_NO , KC_HASH , KC_DLR  , KC_LCBR , KC_RCBR , KC_PIPE , KC_NO  ,
-  KC_NO , KC_NO , KC_1  , KC_2 , KC_3  , KC_0    ,                                          KC_EXLM , KC_TILD , KC_LPRN , KC_RPRN , KC_NO   , KC_NO  ,
-  KC_NO , KC_NO , KC_NO , KC_0 , KC_NO ,           KC_DOT ,                         KC_NO ,           KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO  ,
-                                         KC_NO   , KC_NO  , KC_NO ,         KC_NO , KC_NO , KC_NO
+//    ┌────┬────┬────┬───┬────┬─────┬─────┐               ┌─────┬─────┬────┬────┬────┬────┬──────┐
+//    │ no │ no │ no │ 0 │ no │  *  │ no  │               │ no  │ no  │ `  │ /  │ \  │ %  │ bspc │
+//    ├────┼────┼────┼───┼────┼─────┼─────┤               ├─────┼─────┼────┼────┼────┼────┼──────┤
+//    │ no │ no │ 7  │ 8 │ 9  │  +  │ no  │               │ no  │  @  │ &  │ [  │ ]  │ =  │  ;   │
+//    ├────┼────┼────┼───┼────┼─────┼─────┤               ├─────┼─────┼────┼────┼────┼────┼──────┤
+//    │ no │ no │ 4  │ 5 │ 6  │  -  │ no  │               │ no  │  $  │ #  │ (  │ )  │ ~  │  '   │
+//    ├────┼────┼────┼───┼────┼─────┼─────┘               └─────┼─────┼────┼────┼────┼────┼──────┤
+//    │ no │ no │ 1  │ 2 │ 3  │  0  │                           │  ^  │ _  │ no │ no │ no │  no  │
+//    ├────┼────┼────┼───┼────┼─────┼─────┐               ┌─────┼─────┼────┼────┼────┼────┼──────┤
+//    │ no │ no │ no │ 0 │ no │     │  .  │               │ no  │     │ no │ no │ no │ no │  no  │
+//    └────┴────┴────┴───┴────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼────┴────┴────┴────┴──────┘
+//                            │     │     │     │   │     │     │     │
+//                            └─────┴─────┴─────┘   └─────┴─────┴─────┘
+  KC_NO , KC_NO , KC_NO , KC_0 , KC_NO , KC_ASTR , KC_NO   ,                         KC_NO   , KC_NO   , KC_GRAVE , KC_SLASH , KC_BSLS , KC_PERC , KC_BSPC ,
+  KC_NO , KC_NO , KC_7  , KC_8 , KC_9  , KC_PLUS , KC_NO   ,                         KC_NO   , KC_AT   , KC_AMPR  , KC_LBRC  , KC_RBRC , KC_EQL  , KC_SCLN ,
+  KC_NO , KC_NO , KC_4  , KC_5 , KC_6  , KC_MINS , KC_NO   ,                         KC_NO   , KC_DLR  , KC_HASH  , KC_LPRN  , KC_RPRN , KC_TILD , KC_QUOTE,
+  KC_NO , KC_NO , KC_1  , KC_2 , KC_3  , KC_0    ,                                             KC_CIRC , KC_UNDS  , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,
+  KC_NO , KC_NO , KC_NO , KC_0 , KC_NO ,           KC_DOT  ,                         KC_NO   ,           KC_NO    , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,
+                                         _______ , _______ , _______ ,     _______ , _______ , _______
 ),
 
 [_TXT_NAV] = LAYOUT_moonlander(
-//    ┌────┬────┬────┬────┬────┬────┬────┐                 ┌────┬─────────┬───────────┬──────┬──────┬────┬────┐
-//    │ no │ no │ no │ no │ no │ no │ no │                 │ no │   no    │    no     │  no  │  no  │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┤                 ├────┼─────────┼───────────┼──────┼──────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ no │ no │                 │ no │ pAGE_UP │ LSFT(tab) │  up  │ tab  │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┤                 ├────┼─────────┼───────────┼──────┼──────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ no │ no │                 │ no │  pgdn   │   left    │ down │ rght │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┘                 └────┼─────────┼───────────┼──────┼──────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ no │                           │   no    │    no     │ down │  no  │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┐                 ┌────┼─────────┼───────────┼──────┼──────┼────┼────┤
-//    │ no │ no │ no │ no │ no │    │ no │                 │ no │         │    no     │  no  │  no  │ no │ no │
-//    └────┴────┴────┴────┴────┼────┼────┼────┐       ┌────┼────┼─────────┼───────────┴──────┴──────┴────┴────┘
-//                             │ no │ no │ no │       │ no │ no │   no    │
-//                             └────┴────┴────┘       └────┴────┴─────────┘
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO , KC_NO      , KC_NO        , KC_NO   , KC_NO   , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO , KC_PAGE_UP , LSFT(KC_TAB) , KC_UP   , KC_TAB  , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO , KC_PGDN    , KC_LEFT      , KC_DOWN , KC_RGHT , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                         KC_NO      , KC_NO        , KC_DOWN , KC_NO   , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                         KC_NO ,              KC_NO        , KC_NO   , KC_NO   , KC_NO , KC_NO,
-                                          KC_NO , KC_NO , KC_NO ,         KC_NO , KC_NO , KC_NO
+//    ┌────┬────┬────┬────┬────┬────┬────┐             ┌────┬─────────┬───────────┬────────────────┬─────────────┬────┬────┐
+//    │ no │ no │ no │ no │ no │ no │ no │             │ no │   no    │ www_back  │ www_favourites │ www_forward │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┤             ├────┼─────────┼───────────┼────────────────┼─────────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │ no │             │ no │ pAGE_UP │ LSFT(tab) │       up       │     tab     │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┤             ├────┼─────────┼───────────┼────────────────┼─────────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │ no │             │ no │  pgdn   │   left    │      down      │    rght     │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┘             └────┼─────────┼───────────┼────────────────┼─────────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │                       │   no    │    no     │      down      │     no      │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┐             ┌────┼─────────┼───────────┼────────────────┼─────────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │    │ no │             │ no │         │    no     │       no       │     no      │ no │ no │
+//    └────┴────┴────┴────┴────┼────┼────┼────┐   ┌────┼────┼─────────┼───────────┴────────────────┴─────────────┴────┴────┘
+//                             │ no │ no │ no │   │ no │ no │   no    │
+//                             └────┴────┴────┘   └────┴────┴─────────┘
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_NO      , KC_WWW_BACK  , KC_WWW_FAVORITES , KC_WWW_FORWARD , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_PAGE_UP , LSFT(KC_TAB) , KC_UP            , KC_TAB         , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_PGDN    , KC_LEFT      , KC_DOWN          , KC_RGHT        , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                     KC_NO      , KC_NO        , KC_DOWN          , KC_NO          , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                     KC_NO ,              KC_NO        , KC_NO            , KC_NO          , KC_NO , KC_NO,
+                                          KC_NO , KC_NO , KC_NO ,     KC_NO , KC_NO , KC_NO
 ),
 
 [_MOUSE] = LAYOUT_moonlander(
-//    ┌────┬────┬────┬────┬────┬────┬────┐                 ┌──────┬──────┬──────┬──────┬──────┬──────┬────┐
-//    │ no │ no │ no │ no │ no │ no │ no │                 │  no  │  no  │  no  │  no  │  no  │  no  │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┤                 ├──────┼──────┼──────┼──────┼──────┼──────┼────┤
-//    │ no │ no │ no │ no │ no │ no │ no │                 │  no  │  no  │ wh_u │ ms_u │  no  │  no  │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┤                 ├──────┼──────┼──────┼──────┼──────┼──────┼────┤
-//    │ no │ no │ no │ no │ no │ no │ no │                 │  no  │  no  │ ms_l │ ms_d │ ms_r │  no  │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┘                 └──────┼──────┼──────┼──────┼──────┼──────┼────┤
-//    │ no │ no │ no │ no │ no │ no │                             │  no  │ wh_d │ ms_l │ ms_d │ ms_r │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┐                 ┌──────┼──────┼──────┼──────┼──────┼──────┼────┤
-//    │ no │ no │ no │ no │ no │    │ no │                 │  no  │      │  no  │  no  │  no  │  no  │ no │
-//    └────┴────┴────┴────┴────┼────┼────┼────┐       ┌────┼──────┼──────┼──────┴──────┴──────┴──────┴────┘
-//                             │ no │ no │ no │       │ no │ btn1 │ btn2 │
-//                             └────┴────┴────┘       └────┴──────┴──────┘
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO   , KC_NO   , KC_WH_U , KC_MS_U , KC_NO   , KC_NO   , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO   , KC_NO   , KC_MS_L , KC_MS_D , KC_MS_R , KC_NO   , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                           KC_NO   , KC_WH_D , KC_MS_L , KC_MS_D , KC_MS_R , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                         KC_NO   ,           KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO,
-                                          KC_NO , KC_NO , KC_NO ,         KC_NO , KC_BTN1 , KC_BTN2
+//    ┌────┬────┬────┬────┬────┬────┬────┐             ┌──────┬────────────┬─────────┬──────┬─────────┬────┬────┐
+//    │ no │ no │ no │ no │ no │ no │ no │             │  no  │     no     │  wh_l   │ btn3 │  wh_r   │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┤             ├──────┼────────────┼─────────┼──────┼─────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │ no │             │  no  │    wh_u    │  btn1   │ ms_u │  btn2   │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┤             ├──────┼────────────┼─────────┼──────┼─────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │ no │             │  no  │    wh_d    │  ms_l   │ ms_d │  ms_r   │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┘             └──────┼────────────┼─────────┼──────┼─────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │                         │ rght_SHIFT │ LGUI([) │ ms_d │ LGUI(]) │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┐             ┌──────┼────────────┼─────────┼──────┼─────────┼────┼────┤
+//    │ no │ no │ no │ no │ no │    │ no │             │  no  │            │   no    │  no  │   no    │ no │ no │
+//    └────┴────┴────┴────┴────┼────┼────┼────┐   ┌────┼──────┼────────────┼─────────┴──────┴─────────┴────┴────┘
+//                             │ no │ no │ no │   │ no │ btn2 │    btn1    │
+//                             └────┴────┴────┘   └────┴──────┴────────────┘
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO   , KC_NO          , KC_MS_WH_LEFT , KC_MS_BTN3 , KC_MS_WH_RIGHT , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO   , KC_WH_U        , KC_BTN1       , KC_MS_U    , KC_BTN2        , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO   , KC_WH_D        , KC_MS_L       , KC_MS_D    , KC_MS_R        , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                       KC_RIGHT_SHIFT , LGUI(KC_LBRC) , KC_MS_D    , LGUI(KC_RBRC)  , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                     KC_NO   ,                  KC_NO         , KC_NO      , KC_NO          , KC_NO , KC_NO,
+                                          KC_NO , KC_NO , KC_NO ,     KC_NO , KC_BTN2 , KC_BTN1
 ),
 
 [_APP] = LAYOUT_moonlander(
-//    ┌────┬────┬─────────┬─────────┬─────────┬────┬──────┐                 ┌──────┬─────────┬──────────┬─────────┬─────────┬────┬────┐
-//    │ no │ no │   no    │ LALT(0) │   no    │ no │  no  │                 │  no  │   no    │ PREV_TAB │ LALT(q) │ NXT_TAB │ no │ no │
-//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┤                 ├──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
-//    │ no │ no │ LALT(7) │ LALT(8) │ LALT(9) │ no │  no  │                 │  no  │ VOL_UP  │   C(w)   │   no    │   no    │ no │ no │
-//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┤                 ├──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
-//    │ no │ no │ LALT(4) │ LALT(5) │ LALT(6) │ no │  no  │                 │  no  │ VOL_DN  │    e     │    i    │   no    │ no │ no │
-//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┘                 └──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
-//    │ no │ no │ LALT(1) │ LALT(2) │ LALT(3) │ no │                               │   no    │    no    │   no    │   no    │ no │ no │
-//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┐                 ┌──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
-//    │ no │ no │   no    │   no    │   no    │    │  no  │                 │  no  │         │    no    │   no    │   no    │ no │ no │
-//    └────┴────┴─────────┴─────────┴─────────┼────┼──────┼────┐       ┌────┼──────┼─────────┼──────────┴─────────┴─────────┴────┴────┘
-//                                            │ no │ lsft │ no │       │ no │ lgui │ PLAY_PS │
-//                                            └────┴──────┴────┘       └────┴──────┴─────────┘
-  KC_NO , KC_NO , KC_NO      , LALT(KC_0) , KC_NO      , KC_NO , KC_NO   ,                         KC_NO   , KC_NO   , PREV_TAB , LALT(KC_Q) , NXT_TAB , KC_NO , KC_NO,
-  KC_NO , KC_NO , LALT(KC_7) , LALT(KC_8) , LALT(KC_9) , KC_NO , KC_NO   ,                         KC_NO   , VOL_UP  , C(KC_W)  , KC_NO      , KC_NO   , KC_NO , KC_NO,
-  KC_NO , KC_NO , LALT(KC_4) , LALT(KC_5) , LALT(KC_6) , KC_NO , KC_NO   ,                         KC_NO   , VOL_DN  , KC_E     , KC_I       , KC_NO   , KC_NO , KC_NO,
-  KC_NO , KC_NO , LALT(KC_1) , LALT(KC_2) , LALT(KC_3) , KC_NO ,                                             KC_NO   , KC_NO    , KC_NO      , KC_NO   , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO      , KC_NO      , KC_NO      ,         KC_NO   ,                         KC_NO   ,           KC_NO    , KC_NO      , KC_NO   , KC_NO , KC_NO,
-                                                         KC_NO , KC_LSFT , KC_NO ,         KC_NO , KC_LGUI , PLAY_PS
+//    ┌────┬────┬─────────┬─────────┬─────────┬────┬──────┐             ┌──────┬─────────┬──────────┬─────────┬─────────┬────┬────┐
+//    │ no │ no │   no    │ LALT(0) │   no    │ no │  no  │             │  no  │   no    │ PREV_TAB │ LALT(q) │ NXT_TAB │ no │ no │
+//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┤             ├──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
+//    │ no │ no │ LALT(7) │ LALT(8) │ LALT(9) │ no │  no  │             │  no  │ VOL_UP  │   C(w)   │   no    │   no    │ no │ no │
+//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┤             ├──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
+//    │ no │ no │ LALT(4) │ LALT(5) │ LALT(6) │ no │  no  │             │  no  │ VOL_DN  │    e     │    i    │   no    │ no │ no │
+//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┘             └──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
+//    │ no │ no │ LALT(1) │ LALT(2) │ LALT(3) │ no │                           │   no    │    no    │   no    │   no    │ no │ no │
+//    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┐             ┌──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
+//    │ no │ no │   no    │   no    │   no    │    │  no  │             │  no  │         │    no    │   no    │   no    │ no │ no │
+//    └────┴────┴─────────┴─────────┴─────────┼────┼──────┼────┐   ┌────┼──────┼─────────┼──────────┴─────────┴─────────┴────┴────┘
+//                                            │ no │ lsft │ no │   │ no │ lgui │ PLAY_PS │
+//                                            └────┴──────┴────┘   └────┴──────┴─────────┘
+  KC_NO , KC_NO , KC_NO      , LALT(KC_0) , KC_NO      , KC_NO , KC_NO   ,                     KC_NO   , KC_NO   , PREV_TAB , LALT(KC_Q) , NXT_TAB , KC_NO , KC_NO,
+  KC_NO , KC_NO , LALT(KC_7) , LALT(KC_8) , LALT(KC_9) , KC_NO , KC_NO   ,                     KC_NO   , VOL_UP  , C(KC_W)  , KC_NO      , KC_NO   , KC_NO , KC_NO,
+  KC_NO , KC_NO , LALT(KC_4) , LALT(KC_5) , LALT(KC_6) , KC_NO , KC_NO   ,                     KC_NO   , VOL_DN  , KC_E     , KC_I       , KC_NO   , KC_NO , KC_NO,
+  KC_NO , KC_NO , LALT(KC_1) , LALT(KC_2) , LALT(KC_3) , KC_NO ,                                         KC_NO   , KC_NO    , KC_NO      , KC_NO   , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO      , KC_NO      , KC_NO      ,         KC_NO   ,                     KC_NO   ,           KC_NO    , KC_NO      , KC_NO   , KC_NO , KC_NO,
+                                                         KC_NO , KC_LSFT , KC_NO ,     KC_NO , KC_LGUI , PLAY_PS
 ),
 
 [_FUNC] = LAYOUT_moonlander(
-//    ┌────┬────┬─────┬─────┬─────┬────┬────┐                 ┌────┬────┬────┬────┬────┬────┬────┐
-//    │ no │ no │ f13 │ f14 │ f15 │ no │ no │                 │ no │ no │ no │ no │ no │ no │ no │
-//    ├────┼────┼─────┼─────┼─────┼────┼────┤                 ├────┼────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ f10 │ f11 │ f12 │ no │ no │                 │ no │ no │ no │ no │ no │ no │ no │
-//    ├────┼────┼─────┼─────┼─────┼────┼────┤                 ├────┼────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ f7  │ f8  │ f9  │ no │ no │                 │ no │ no │ no │ no │ no │ no │ no │
-//    ├────┼────┼─────┼─────┼─────┼────┼────┘                 └────┼────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ f4  │ f5  │ f6  │ no │                           │ no │ no │ no │ no │ no │ no │
-//    ├────┼────┼─────┼─────┼─────┼────┼────┐                 ┌────┼────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ f1  │ f2  │ f3  │    │ no │                 │ no │    │ no │ no │ no │ no │ no │
-//    └────┴────┴─────┴─────┴─────┼────┼────┼────┐       ┌────┼────┼────┼────┴────┴────┴────┴────┘
-//                                │ no │ no │ no │       │ no │ no │ no │
-//                                └────┴────┴────┘       └────┴────┴────┘
-  KC_NO , KC_NO , KC_F13 , KC_F14 , KC_F15 , KC_NO , KC_NO ,                         KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_F10 , KC_F11 , KC_F12 , KC_NO , KC_NO ,                         KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_F7  , KC_F8  , KC_F9  , KC_NO , KC_NO ,                         KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_F4  , KC_F5  , KC_F6  , KC_NO ,                                         KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_F1  , KC_F2  , KC_F3  ,         KC_NO ,                         KC_NO ,         KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-                                             KC_NO , KC_NO , KC_NO ,         KC_NO , KC_NO , KC_NO
+//    ┌────┬────┬─────┬─────┬─────┬────┬────┐             ┌────┬────┬────┬────┬────┬────┬────┐
+//    │ no │ no │ f13 │ f14 │ f15 │ no │ no │             │ no │ no │ no │ no │ no │ no │ no │
+//    ├────┼────┼─────┼─────┼─────┼────┼────┤             ├────┼────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ f10 │ f11 │ f12 │ no │ no │             │ no │ no │ no │ no │ no │ no │ no │
+//    ├────┼────┼─────┼─────┼─────┼────┼────┤             ├────┼────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ f7  │ f8  │ f9  │ no │ no │             │ no │ no │ no │ no │ no │ no │ no │
+//    ├────┼────┼─────┼─────┼─────┼────┼────┘             └────┼────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ f4  │ f5  │ f6  │ no │                       │ no │ no │ no │ no │ no │ no │
+//    ├────┼────┼─────┼─────┼─────┼────┼────┐             ┌────┼────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ f1  │ f2  │ f3  │    │ no │             │ no │    │ no │ no │ no │ no │ no │
+//    └────┴────┴─────┴─────┴─────┼────┼────┼────┐   ┌────┼────┼────┼────┴────┴────┴────┴────┘
+//                                │ no │ no │ no │   │ no │ no │ no │
+//                                └────┴────┴────┘   └────┴────┴────┘
+  KC_NO , KC_NO , KC_F13 , KC_F14 , KC_F15 , KC_NO , KC_NO ,                     KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_F10 , KC_F11 , KC_F12 , KC_NO , KC_NO ,                     KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_F7  , KC_F8  , KC_F9  , KC_NO , KC_NO ,                     KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_F4  , KC_F5  , KC_F6  , KC_NO ,                                     KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_F1  , KC_F2  , KC_F3  ,         KC_NO ,                     KC_NO ,         KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+                                             KC_NO , KC_NO , KC_NO ,     KC_NO , KC_NO , KC_NO
 ),
 
 [_KEYB] = LAYOUT_moonlander(
-//    ┌────┬────┬────┬────┬────┬────┬────┐                 ┌────┬──────┬────┬────┬────┬────┬────┐
-//    │ no │ no │ no │ no │ no │ no │ no │                 │ no │  no  │ no │ no │ no │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┤                 ├────┼──────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ no │ no │                 │ no │  no  │ no │ no │ no │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┤                 ├────┼──────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ no │ no │                 │ no │ bRIU │ no │ no │ no │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┘                 └────┼──────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ no │ no │ no │ no │                           │ bRID │ no │ no │ no │ no │ no │
-//    ├────┼────┼────┼────┼────┼────┼────┐                 ┌────┼──────┼────┼────┼────┼────┼────┤
-//    │ no │ no │ no │ no │ no │    │ no │                 │ no │      │ no │ no │ no │ no │ no │
-//    └────┴────┴────┴────┴────┼────┼────┼────┐       ┌────┼────┼──────┼────┴────┴────┴────┴────┘
-//                             │ no │ no │ no │       │ no │ no │  no  │
-//                             └────┴────┴────┘       └────┴────┴──────┘
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO , KC_NO   , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO , KC_NO   , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                         KC_NO , KC_BRIU , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                         KC_BRID , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                         KC_NO ,           KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
-                                          KC_NO , KC_NO , KC_NO ,         KC_NO , KC_NO , KC_NO
+//    ┌────┬────┬────┬────┬────┬────┬────┐             ┌────┬──────┬────┬────┬────┬────┬────┐
+//    │ no │ no │ no │ no │ no │ no │ no │             │ no │  no  │ no │ no │ no │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┤             ├────┼──────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │ no │             │ no │ bRIU │ no │ no │ no │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┤             ├────┼──────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │ no │             │ no │ bRID │ no │ no │ no │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┘             └────┼──────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ no │ no │ no │ no │                       │  no  │ no │ no │ no │ no │ no │
+//    ├────┼────┼────┼────┼────┼────┼────┐             ┌────┼──────┼────┼────┼────┼────┼────┤
+//    │ no │ no │ no │ no │ no │    │ no │             │ no │      │ no │ no │ no │ no │ no │
+//    └────┴────┴────┴────┴────┼────┼────┼────┐   ┌────┼────┼──────┼────┴────┴────┴────┴────┘
+//                             │ no │ no │ no │   │ no │ no │  no  │
+//                             └────┴────┴────┘   └────┴────┴──────┘
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_NO   , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_BRIU , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_BRID , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                     KC_NO   , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                     KC_NO ,           KC_NO , KC_NO , KC_NO , KC_NO , KC_NO,
+                                          KC_NO , KC_NO , KC_NO ,     KC_NO , KC_NO , KC_NO
 )
 };
 
