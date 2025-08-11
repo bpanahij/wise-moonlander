@@ -211,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┤             ├──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
 //    │ no │ no │ LALT(7) │ LALT(8) │ LALT(9) │ no │  no  │             │  no  │ VOL_UP  │   C(w)   │   no    │   no    │ no │ no │
 //    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┤             ├──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
-//    │ no │ no │ LALT(4) │ LALT(5) │ LALT(6) │ no │  no  │             │  no  │ VOL_DN  │    e     │    i    │   no    │ no │ no │
+//    │ no │ no │ LALT(4) │ LALT(5) │ LALT(6) │ no │  no  │             │  no  │ VOL_DN  │    no    │    e    │    i    │ no │ no │
 //    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┘             └──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
 //    │ no │ no │ LALT(1) │ LALT(2) │ LALT(3) │ no │                           │   no    │    no    │   no    │   no    │ no │ no │
 //    ├────┼────┼─────────┼─────────┼─────────┼────┼──────┐             ┌──────┼─────────┼──────────┼─────────┼─────────┼────┼────┤
@@ -221,7 +221,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                            └────┴──────┴────┘   └────┴──────┴─────────┘
   KC_NO , KC_NO , KC_NO      , LALT(KC_0) , KC_NO      , KC_NO , KC_NO   ,                     KC_NO   , KC_NO   , PREV_TAB , LALT(KC_Q) , NXT_TAB , KC_NO , KC_NO,
   KC_NO , KC_NO , LALT(KC_7) , LALT(KC_8) , LALT(KC_9) , KC_NO , KC_NO   ,                     KC_NO   , VOL_UP  , C(KC_W)  , KC_NO      , KC_NO   , KC_NO , KC_NO,
-  KC_NO , KC_NO , LALT(KC_4) , LALT(KC_5) , LALT(KC_6) , KC_NO , KC_NO   ,                     KC_NO   , VOL_DN  , KC_E     , KC_I       , KC_NO   , KC_NO , KC_NO,
+  KC_NO , KC_NO , LALT(KC_4) , LALT(KC_5) , LALT(KC_6) , KC_NO , KC_NO   ,                     KC_NO   , VOL_DN  , KC_NO    , KC_E       , KC_I    , KC_NO , KC_NO,
   KC_NO , KC_NO , LALT(KC_1) , LALT(KC_2) , LALT(KC_3) , KC_NO ,                                         KC_NO   , KC_NO    , KC_NO      , KC_NO   , KC_NO , KC_NO,
   KC_NO , KC_NO , KC_NO      , KC_NO      , KC_NO      ,         KC_NO   ,                     KC_NO   ,           KC_NO    , KC_NO      , KC_NO   , KC_NO , KC_NO,
                                                          KC_NO , KC_LSFT , KC_NO ,     KC_NO , KC_LGUI , PLAY_PS
