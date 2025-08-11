@@ -118,25 +118,25 @@ tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAK] = LAYOUT_moonlander(
-//    ┌──────┬────┬────┬───────────┬───────┬─────┬──────┐             ┌──────┬──────────┬────┬────┬────┬────┬──────┐
-//    │ esc  │ no │ no │ FNC_MINUS │  no   │ no  │  no  │             │  no  │    no    │ `  │ /  │ \  │ %  │ bspc │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤             ├──────┼──────────┼────┼────┼────┼────┼──────┤
-//    │  no  │ q  │ w  │     f     │   p   │  g  │  no  │             │  no  │    j     │ l  │ u  │ y  │ =  │  :   │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤             ├──────┼──────────┼────┼────┼────┼────┼──────┤
-//    │ lctl │ a  │ r  │  MOUSE_S  │ TXT_T │  d  │  no  │             │  no  │    h     │ n  │ e  │ i  │ o  │  '   │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┘             └──────┼──────────┼────┼────┼────┼────┼──────┤
-//    │ lsft │ z  │ x  │     c     │   v   │  b  │                           │    k     │ m  │ ,  │ .  │ /  │  !   │
-//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┐             ┌──────┼──────────┼────┼────┼────┼────┼──────┤
-//    │ lalt │ no │ no │    no     │  no   │     │  no  │             │  no  │          │ no │ no │ no │ no │  no  │
-//    └──────┴────┴────┴───────────┴───────┼─────┼──────┼────┐   ┌────┼──────┼──────────┼────┴────┴────┴────┴──────┘
-//                                         │ spc │ lsft │ no │   │ no │ lgui │ CTL_ENTR │
-//                                         └─────┴──────┴────┘   └────┴──────┴──────────┘
-  KC_ESC  , KC_NO , KC_NO , FNC_MINUS , KC_NO , KC_NO  , KC_NO   ,                     KC_NO   , KC_NO    , KC_GRAVE , KC_SLASH , KC_BSLS , KC_PERC  , KC_BSPC,
-  KC_NO   , KC_Q  , KC_W  , KC_F      , KC_P  , KC_G   , KC_NO   ,                     KC_NO   , KC_J     , KC_L     , KC_U     , KC_Y    , KC_EQL   , KC_COLN,
-  KC_LCTL , KC_A  , KC_R  , MOUSE_S   , TXT_T , KC_D   , KC_NO   ,                     KC_NO   , KC_H     , KC_N     , KC_E     , KC_I    , KC_O     , KC_QUOT,
-  KC_LSFT , KC_Z  , KC_X  , KC_C      , KC_V  , KC_B   ,                                         KC_K     , KC_M     , KC_COMM  , KC_DOT  , KC_SLASH , KC_EXLM,
-  KC_LALT , KC_NO , KC_NO , KC_NO     , KC_NO ,          KC_NO   ,                     KC_NO   ,            KC_NO    , KC_NO    , KC_NO   , KC_NO    , KC_NO  ,
-                                                KC_SPC , KC_LSFT , KC_NO ,     KC_NO , KC_LGUI , CTL_ENTR
+//    ┌──────┬────┬────┬───────────┬───────┬─────┬──────┐                 ┌──────┬──────────┬────┬────┬────┬────┬──────┐
+//    │ esc  │ no │ no │ FNC_MINUS │  no   │ no  │  no  │                 │  no  │    no    │ `  │ /  │ \  │ %  │ bspc │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤                 ├──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │  no  │ q  │ w  │     f     │   p   │  g  │  no  │                 │  no  │    j     │ l  │ u  │ y  │ =  │  :   │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┤                 ├──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │ lctl │ a  │ r  │  MOUSE_S  │ TXT_T │  d  │  no  │                 │  no  │    h     │ n  │ e  │ i  │ o  │  '   │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┘                 └──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │ lsft │ z  │ x  │     c     │   v   │  b  │                               │    k     │ m  │ ,  │ .  │ /  │  !   │
+//    ├──────┼────┼────┼───────────┼───────┼─────┼──────┐                 ┌──────┼──────────┼────┼────┼────┼────┼──────┤
+//    │ lalt │ no │ no │    no     │  no   │     │  no  │                 │ del  │          │ no │ no │ no │ no │  no  │
+//    └──────┴────┴────┴───────────┴───────┼─────┼──────┼──────┐   ┌──────┼──────┼──────────┼────┴────┴────┴────┴──────┘
+//                                         │ spc │ lsft │ pscr │   │ caps │ lgui │ CTL_ENTR │
+//                                         └─────┴──────┴──────┘   └──────┴──────┴──────────┘
+  KC_ESC  , KC_NO , KC_NO , FNC_MINUS , KC_NO , KC_NO  , KC_NO   ,                         KC_NO   , KC_NO    , KC_GRAVE , KC_SLASH , KC_BSLS , KC_PERC  , KC_BSPC,
+  KC_NO   , KC_Q  , KC_W  , KC_F      , KC_P  , KC_G   , KC_NO   ,                         KC_NO   , KC_J     , KC_L     , KC_U     , KC_Y    , KC_EQL   , KC_COLN,
+  KC_LCTL , KC_A  , KC_R  , MOUSE_S   , TXT_T , KC_D   , KC_NO   ,                         KC_NO   , KC_H     , KC_N     , KC_E     , KC_I    , KC_O     , KC_QUOT,
+  KC_LSFT , KC_Z  , KC_X  , KC_C      , KC_V  , KC_B   ,                                             KC_K     , KC_M     , KC_COMM  , KC_DOT  , KC_SLASH , KC_EXLM,
+  KC_LALT , KC_NO , KC_NO , KC_NO     , KC_NO ,          KC_NO   ,                         KC_DEL  ,            KC_NO    , KC_NO    , KC_NO   , KC_NO    , KC_NO  ,
+                                                KC_SPC , KC_LSFT , KC_PSCR ,     KC_CAPS , KC_LGUI , CTL_ENTR
 ),
 
 [_NUMPAD] = LAYOUT_moonlander(
