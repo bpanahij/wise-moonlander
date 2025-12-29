@@ -10,7 +10,7 @@
 
 enum custom_keycodes {
     RGB_SLD = ML_SAFE_RANGE,
-    ESC_COLON = SAFE_RANGE,
+    ESC_COLON,
 };
 
 enum moonlander_layers {
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO   , KC_Q  , KC_W  , KC_F      , KC_P  , KC_G   , KC_NO   ,                         KC_NO   , KC_J     , KC_L     , KC_U     , KC_Y    , KC_EQL   , KC_COLN,
   KC_LCTL , KC_A  , KC_R  , MOUSE_S   , TXT_T , KC_D   , KC_NO   ,                         KC_NO   , KC_H     , KC_N     , KC_E     , KC_I    , KC_O     , KC_QUOT,
   KC_LSFT , KC_Z  , KC_X  , KC_C      , KC_V  , KC_B   ,                                             KC_K     , KC_M     , KC_COMM  , KC_DOT  , KC_SLASH , KC_EXLM,
-  KC_LALT , KC_NO , KC_NO , KC_NO     , KC_NO ,          KC_NO   ,                         KC_DEL  ,            KC_NO    , KC_NO    , KC_NO   , KC_NO    , KC_NO  ,
+  KC_LALT , KC_NO , KC_NO , KC_NO     , KC_NO ,          KC_NO   ,                         KC_DEL  ,            LGUI(KC_ENT)    , KC_NO    , KC_NO   , KC_NO    , KC_NO  ,
                                                 KC_SPC , KC_LSFT , KC_PSCR ,     KC_CAPS , KC_LGUI , CTL_ENTR
 ),
 
@@ -156,8 +156,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_NO , KC_NO , KC_NO , KC_0 , KC_NO , KC_ASTR , KC_NO   ,                         KC_NO   , KC_NO   , KC_GRAVE , KC_SLASH , KC_BSLS , KC_PERC , KC_BSPC ,
   KC_NO , KC_NO , KC_7  , KC_8 , KC_9  , KC_PLUS , KC_NO   ,                         KC_NO   , KC_AT   , KC_AMPR  , KC_LBRC  , KC_RBRC , KC_EQL  , KC_SCLN ,
   KC_NO , KC_NO , KC_4  , KC_5 , KC_6  , KC_MINS , KC_NO   ,                         KC_NO   , KC_DLR  , KC_HASH  , KC_LPRN  , KC_RPRN , KC_TILD , KC_QUOTE,
-  KC_NO , KC_NO , KC_1  , KC_2 , KC_3  , KC_0    ,                                             KC_CIRC , KC_UNDS  , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,
-  KC_NO , KC_NO , KC_NO , KC_0 , KC_NO ,           KC_DOT  ,                         KC_NO   ,           KC_NO    , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,
+  KC_NO , KC_NO , KC_1  , KC_2 , KC_3  , KC_DOT    ,                                             KC_CIRC , KC_UNDS  , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,
+  KC_NO , KC_NO , KC_NO , KC_0 , KC_NO ,           KC_NO  ,                         KC_NO   ,           KC_NO    , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,
                                          _______ , _______ , _______ ,     _______ , _______ , _______
 ),
 
