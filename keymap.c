@@ -176,8 +176,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                             │ no │ no │ no │   │ no │ no │   no    │
 //                             └────┴────┴────┘   └────┴────┴─────────┘
   KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_NO      , KC_WWW_BACK  , KC_WWW_FAVORITES , KC_WWW_FORWARD , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_PAGE_UP , LSFT(KC_TAB) , KC_UP            , KC_TAB         , KC_NO , KC_NO,
-  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_PGDN    , KC_LEFT      , KC_DOWN          , KC_RGHT        , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_PGDN , LSFT(KC_TAB) , KC_UP            , KC_TAB         , KC_NO , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                     KC_NO , KC_PAGE_UP    , KC_LEFT      , KC_DOWN          , KC_RGHT        , KC_NO , KC_NO,
   KC_NO , KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,                                     KC_NO      , KC_NO        , KC_DOWN          , KC_NO          , KC_NO , KC_NO,
   KC_NO , KC_NO , KC_NO , KC_NO , KC_NO ,         KC_NO ,                     KC_NO ,              KC_NO        , KC_NO            , KC_NO          , KC_NO , KC_NO,
                                           KC_NO , KC_NO , KC_NO ,     KC_NO , KC_NO , KC_NO
